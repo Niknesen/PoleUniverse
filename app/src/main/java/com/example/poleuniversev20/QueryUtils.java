@@ -58,7 +58,7 @@ public class QueryUtils {
                 ratedPenalty = false;
             }
         } catch (JSONException e) {
-            Log.e("QueryUtils", "Problem with parsing the earthquake JSON results", e);
+            Log.e("QueryUtils", "Problem with parsing the JSON results", e);
         }
 
         // Return the list of athletes
