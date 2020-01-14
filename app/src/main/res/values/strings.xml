@@ -1,0 +1,140 @@
+<resources>
+    <string name="app_name">Pole Universe</string>
+    <string name="Choreography">Хореография</string>
+    <string name="Technique">Техника</string>
+    <string name="Artistic">Артистизм</string>
+    <string name="Penalty">Штрафы</string>
+    <string name="JudgeNameInput">Введите ваше Фамилию и Имя</string>
+    <string name="DaysLabel">Дни соревнования</string>
+    <string name="Day1">День 1</string>
+    <string name="Day2">День 2</string>
+    <string name="CheckSurname"> Проверьте Фамилию, Ироды</string>
+
+    <string name="save">Сохранить</string>
+    <string name="Day1Categories">День Первый. Категории</string>
+    <string name="Day2Categories">День Второй. Категории</string>
+    <string name="CategoryAmators">Аматоры</string>
+    <string name="CategoryAProfessionals">Профессионалы</string>
+    <string name="Ranging">Судейская Оценка</string>
+    <string name="Checked">&#9745;</string>
+    <string name="UnChecked">&#9744;</string>
+    <string name="empty_view">No Internet Connection!</string>empty_view
+    <string-array name="array_name">
+        <item>Array Item One</item>
+        <item>Array Item Two</item>
+        <item>Array Item Three</item>
+    </string-array>
+    <string name="Gratitude">Спасибо за Вашу Оценку!</string>empty_view
+
+    <string name="POLE_ARTISTIC_children_6_9_amators">POLE ARTISTIC children (6-9)-amators</string>
+    <string name="POLE_ARTISTIC_children_6_9_halfpro">POLE ARTISTIC children (6-9)-halfpro</string>
+    <string name="POLE_ARTISTIC_children_6_9_pro">POLE ARTISTIC children (6-9)-pro</string>
+    <string name="POLE_ARTISTIC_children_10_amator">POLE  ARTISTIC children(10)-amator</string>
+    <string name="POLE_ARTISTIC_children_11_12_amators">POLE ARTISTIC children (11-12)-amators</string>
+    <string name="POLE_ARTISTIC_children_13_amators">POLE ARTISTIC children (13)-amators</string>
+    <string name="POLE_ARTISTIC_children_10_13_halfpro">POLE ARTISTIC children (10-13)-halfpro</string>
+    <string name="POLE_ARTISTIC_children_10_3_pro">POLE ARTISTIC children (10-13)-pro</string>
+    <string name="POLE_ARTISTIC_Groups_amators">POLE ARTISTIC Groups-amators</string>
+    <string name="POLE_ARTISTIC_Groups_pro">POLE ARTISTIC Groups-pro</string>
+    <string name="POLE_ARTISTIC_Juniors_14_17_amators">POLE ARTISTIC Juniors (14-17)-amators</string>
+    <string name="POLE_ARTISTIC_Juniors_14_17_halfpro">POLE ARTISTIC Juniors (14-17)-halfpro</string>
+    <string name="POLE_ARTISTIC_Juniors_14_17_pro">POLE ARTISTIC Juniors (14-17)-pro</string>
+    <string name="POLE_ARTISTIC_Juniors_14_17_elit">POLE ARTISTIC Juniors (14-17)-elit</string>
+    <string name="POLE_ARTISTIС_adult_female_category_18_34_amator">POLE ARTISTIС adult female category (18-34)-amator</string>
+    <string name="POLE_ARTISTIС_adult_female_category_18_34_halfpr">POLE ARTISTIС adult female category (18-34)-halfpr</string>
+    <string name="POLE_ARTISTIС_adult_female_category_18_34_pro">POLE ARTISTIС adult female category (18-34)-pro</string>
+    <string name="POLE_ARTISTIС_adult_female_category_18_34_elit">POLE ARTISTIС adult female category (18-34)-elit</string>
+    <string name="POLE_ARTISTIС_adult_female_category_35">POLE ARTISTIС adult female category 35+</string>
+    <string name="Adult_male_category">Adult male category</string>
+    <string name="Pole_Exotic_amators">Pole Exotic-amators</string>
+    <string name="Pole_Exotic_halfpro">Pole Exotic-halfpro</string>
+    <string name="Pole_Exotic_pro">Pole Exotic-pro</string>
+    <string name="Pole_Exotic_35">Pole Exotic-35+</string>
+
+    <string name="POLE_SPORT_Children_6_9__amators_">POLE SPORT Children(6-9)-amators</string>
+<string name="POLE_SPORT_Children_6_9__halfpro">POLE SPORT Children(6-9)-halfpro</string>
+<string name="POLE_SPORT_children__6_9__pro">POLE SPORT children (6-9)-pro</string>
+<string name="POLE_SPORT_children__10_13__amators">POLE SPORT children (10-13)-amators</string>
+<string name="POLE_SPORT_children__10_13__halfpro">POLE SPORT children (10-13)-halfpro</string>
+<string name="POLE_SPORT_children__10_13__pro">POLE SPORT children (10-13)-pro</string>
+<string name="POLE_SPORT_Juniors__14_17__amators">POLE SPORT Juniors (14-17)-amators</string>
+<string name="POLE_SPORT_Juniors__14_17__halfpro">POLE SPORT Юниоры (14-17)-halfpro</string>
+<string name="POLE_SPORT_Juniors__14_17__pro">POLE SPORT Juniors (14-17)-pro</string>
+<string name="POLE_ARTISTIC_SPORT__14_17__elit">POLE ARTISTIC SPORT (14-17)-elit</string>
+<string name="POLE_SPORT_adult_female_category__18_34__amator">POLE SPORT adult female category (18-34)-amator</string>
+<string name="POLE_SPORT_adult_female_category__18_34__halfpr">POLE SPORT adult female category (18-34)-halfpr</string>
+<string name="POLE_SPORT_adult_female_category__18_34__pro">POLE SPORT adult female category (18-34)-pro</string>
+<string name="AERIALS_Children__6_9__amators">AERIALS Children (6-9)-amators</string>
+<string name="AERIALS_Children__6_9__halfpro">AERIALS Children (6-9)-halfpro</string>
+<string name="AERIALS_Children__6_9__pro">AERIALS Children (6-9)-pro</string>
+<string name="HOOP_Children_6_9__amators">HOOP Children(6-9)-amators</string>
+<string name="HOOP_Children_6_9__halfpro">HOOP Children(6-9)-halfpro</string>
+<string name="HOOP_Children_6_9__pro">HOOP Children(6-9)-pro</string>
+<string name="AERIALS_Children__10_13__amators">AERIALS Children (10-13)-amators</string>
+<string name="AERIALS_Children__10_13__halfpro">AERIALS Children (10-13)-halfpro</string>
+<string name="AERIALS_Children__10_13__pro">AERIALS Children (10-13)-pro</string>
+<string name="HOOP_Children__10_13__amators">HOOP Children (10-13)-amators</string>
+<string name="HOOP_Children__10_13__pro">HOOP Children (10-13)-pro</string>
+<string name="GROUPS_AERIAL">GROUPS AERIAL</string>
+<string name="AERIALS__14_17__amators">AERIALS (14-17)-amators</string>
+<string name="AERIALS__14_17__halfpro">AERIALS (14-17)-halfpro</string>
+<string name="AERIALS__14_17__pro">AERIALS (14-17)-pro</string>
+<string name="HOOP__14_17__amators">HOOP (14-17)-amators</string>
+<string name="AERIALS__18_34__pro">AERIALS (18-34)-pro</string>
+<string name="HOOP__18_34__amators">HOOP (18-34)-amators</string>
+<string name="HOOP__18_34__halfpro">HOOP (18-34)-halfpro</string>
+
+
+
+
+
+
+
+
+    <string name="Technique_question_power">Сила</string>
+    <string name="Technique_question_flex">Гибкость</string>
+    <string name="Technique_question_combination">Оригинальные переходы и комбинации</string>
+    <string name="Technique_question_dynamicaerial">Динамика круток</string>
+    <string name="Technique_question_doublePole">Умение владеть двумя пилонами в одинаковой мере, динамика круток</string>
+    <string name="Technique_question_balance">Стойки и баланс</string>
+    <string name="Technique_question_dynamic">Динамические комбинации (быстрые переходы 3 и больше элементов), прыжки, перевороты</string>
+    <string name="Technique_question_dynamic_aerial">Динамические комбинации, прыжки, перевороты</string>
+    <string name="question_comments">Комментарий</string>
+
+    <string name="Choreography_question_plastic">Пластика и грация</string>
+    <string name="Choreography_question_statement">Постановка всего выступления</string>
+    <string name="Choreography_question_music">Музыкальность</string>
+    <string name="Choreography_question_parter">Хорегография в партере</string>
+    <string name="Choreography_question_dynamic">Динамика и амплитудность</string>
+
+    <string name="Artistic_question_emotions">Эмоциональная и артистическая передача музыки, зрительный контакт со зрителем, мимика </string>
+    <string name="Artistic_question_suit">Костюм, прическа, макияж</string>
+    <string name="Artistic_question_character">Соответствие общего образа исполнителя с постановкой</string>
+    <string name="Artistic_question_idea">Оригинальность идеи</string>
+    <string name="Artistic_question_stage">Выход участника на сцену, завершение выступления</string>
+
+    <string name="Penalty_question_stretching">Не натянутые (колени, стопы, кисти)</string>
+    <string name="Penalty_question_view">Ракурс</string>
+    <string name="Penalty_question_fall">Падение </string>
+    <string name="Penalty_question_slip">Сползание</string>
+    <string name="Penalty_question_disbalance">Потеря равновесия без падения </string>
+    <string name="Penalty_question_wiping">Вытирание рук о себя и снаряд </string>
+    <string name="Penalty_question_repeats">Видимые повторения элементов </string>
+
+    <string name="Penalty_question_afterMusic">Продолжение выступления после окончания музыки </string>
+    <string name="Penalty_question_caress">Откровенные элементы или позиции (поглаживание пилона)  </string>
+    <string name="Penalty_question_suit">Проблемы с костюмом, с прической </string>
+    <string name="Penalty_question_singing">Подпевание, произнесения слов, жесты в сторону судей </string>
+
+    <string name="Penalty_question_hint"> Укажите количество эпизодов. 0 - если не было </string>
+    <string name="Penalty_question_hint2"> Укажите, если был эпизод </string>
+
+
+
+
+
+
+
+
+
+</resources>

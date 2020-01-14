@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.poleuniversev20">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".StartActivity"
+            android:label="@string/DaysLabel"
+            android:parentActivityName=".MainActivity">
+
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity
+            android:name=".Categories1Day"
+            android:label="@string/Day1Categories"
+            android:parentActivityName=".StartActivity">
+
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".StartActivity" />
+        </activity>
+        <activity
+            android:name=".Categories2Day"
+            android:label="@string/Day2Categories"
+            android:parentActivityName=".StartActivity">
+
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".StartActivity" />
+        </activity>
+        <activity
+            android:name=".SportsmenList"
+            android:label="@string/Choreography"
+            android:parentActivityName=".StartActivity">
+
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+
+        </activity>
+
+        <activity
+            android:name=".RangingTechnik"
+            android:label="@string/Ranging"
+            android:parentActivityName=".SportsmenList">
+
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+
+
+        </activity>
+        <activity
+            android:name=".RangingTechnikDayTwo"
+            android:label="@string/Ranging"
+            android:parentActivityName=".SportsmenList">
+
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+
+
+        </activity>
+        <activity
+            android:name=".RangingChoreography"
+            android:label="@string/Ranging"
+            android:parentActivityName=".SportsmenList">
+
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+
+
+        </activity>
+        <activity
+            android:name=".RangingChoreographyDayTwo"
+            android:label="@string/Ranging"
+            android:parentActivityName=".SportsmenList">
+
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+
+
+        </activity>
+        <activity
+        android:name=".RangingArtistic"
+        android:label="@string/Ranging"
+        android:parentActivityName=".SportsmenList">
+
+        <!-- Parent activity meta-data to support 4.0 and lower -->
+
+
+    </activity>
+        <activity
+            android:name=".RangingArtisticDayTwo"
+            android:label="@string/Ranging"
+            android:parentActivityName=".SportsmenList">
+
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+
+
+        </activity>
+        <activity
+            android:name=".RangingPenalty"
+            android:label="@string/Ranging"
+            android:parentActivityName=".SportsmenList">
+
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+
+
+        </activity>
+        <activity android:name=".PostRanging"/>
+    </application>
+
+</manifest>

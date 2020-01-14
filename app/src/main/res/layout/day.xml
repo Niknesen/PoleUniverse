@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/day1Button"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:text="@string/Day1"
+        android:textAllCaps="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="8dp"
+        />
+    <Button
+        android:id="@+id/day2Button"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:text="@string/Day2"
+        android:textAllCaps="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="8dp"
+        />
+
+</LinearLayout>
