@@ -13,12 +13,10 @@ import android.widget.RadioGroup;
 import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.preference.PreferenceManager;
-
 import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
@@ -42,7 +40,6 @@ public class RangingPenalty extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         Log.v("Penalty", "TEST111");
-        // SportsmenName
         super.onCreate(savedInstanceState);
         setContentView(R.layout.form_penalty);
         ActionBar actionBar = getSupportActionBar();
@@ -56,9 +53,6 @@ public class RangingPenalty extends AppCompatActivity {
 
         TextView category = findViewById(R.id.formCategoryPenalty);
         category.setText(sportsmenCategory);
-        //PostButton -> PostRanging.class,
-
-
         Pattern pattern = Pattern.compile(".*Exotic.*");
         Matcher matcher = pattern.matcher(sportsmenCategory);
         isExotic = matcher.find();
@@ -79,8 +73,6 @@ public class RangingPenalty extends AppCompatActivity {
         buttonLoad.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // EditText textView = findViewById(R.id.TechnikJudgeComment);
-                // textView.setCursorVisible(false);
                 try {
                     Intent intent = new Intent(getApplicationContext(), PostRanging.class);
                     intent.putExtra("scores", (Serializable) GetScore()); //Put your id to your next Intent
@@ -98,8 +90,6 @@ public class RangingPenalty extends AppCompatActivity {
     }
 
     private Map<String, String> GetScore() {
-
-        Log.v("Penalty", "TEST");
         //Scores
         RadioGroup radioGroupPower = findViewById(R.id.radioPenaltyStretching);
         RadioButton radioButtonPower = findViewById(radioGroupPower.getCheckedRadioButtonId());
@@ -127,8 +117,6 @@ public class RangingPenalty extends AppCompatActivity {
         Switch switch2 = findViewById(R.id.switch2);
         Switch switch3 = findViewById(R.id.switch3);
         Switch switch4 = findViewById(R.id.switch4);
-        //Name of PoleDancer
-        // TextView TechniDancerNameView = findViewById(R.id.ChoreographySportsmenName);
 
         //Judge Comments
         EditText TechnikJudgeCommentView = findViewById(R.id.PenaltyJudgeComment);
@@ -137,21 +125,15 @@ public class RangingPenalty extends AppCompatActivity {
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
         String judgeName = preferences.getString("JudgeNameChoreography", "No Judge");
 
-        //
-
         Map<String, String> score = new HashMap<>();
 
         score.put("category", sportsmenCategory);
-
-
         if (isSport) score.put("action", "PenaltySport");
         else if (isAerials) score.put("action", "PenaltyAerials");
         else score.put("action", "Penalty");
-
         Log.v("Penalty", "Sport -  " + isSport + "  Aerials - " + isAerials);
         score.put("name", sportsmenName);
         score.put("judge", judgeName);
-
         score.put("emotions", (String) radioButtonPower.getText());
         score.put("suit", (String) radioButtonFlex.getText());
         score.put("character", (String) radioButtonCombination.getText());
@@ -159,14 +141,11 @@ public class RangingPenalty extends AppCompatActivity {
         score.put("stage", (String) radioButtonBalance.getText());
         score.put("wiping", (String) radioButtonWiping.getText());
         score.put("repeats", (String) radioButtonRepeats.getText());
-
         score.put("switch1", (switch1.isChecked() ? "1" : "0"));
         if (isExotic) score.put("switch2", "0");
         else score.put("switch2", (switch2.isChecked() ? "1" : "0"));
         score.put("switch3", (switch3.isChecked() ? "1" : "0"));
         score.put("switch4", (switch4.isChecked() ? "1" : "0"));
-
-
         score.put("comment", TechnikJudgeCommentView.getText().toString());
         return score;
     }

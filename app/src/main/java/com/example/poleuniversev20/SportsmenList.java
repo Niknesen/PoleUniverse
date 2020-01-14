@@ -1,6 +1,5 @@
 package com.example.poleuniversev20;
 
-import android.app.Activity;
 import android.app.LoaderManager;
 import android.content.Context;
 import android.content.Intent;
@@ -16,13 +15,11 @@ import android.view.View;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.preference.PreferenceManager;
-
 import java.util.ArrayList;
 
 public class SportsmenList extends AppCompatActivity implements LoaderManager.LoaderCallbacks<ArrayList<SportsmeDataHolder>> {
@@ -91,13 +88,11 @@ public class SportsmenList extends AppCompatActivity implements LoaderManager.Lo
         }
 
         //Check connectivity status by
-        //Creating connectivity manager
         ConnectivityManager cm = (ConnectivityManager) getApplicationContext().getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo netInfo = cm.getActiveNetworkInfo();
         boolean isConected = netInfo != null && netInfo.isConnectedOrConnecting();
         View textView = (TextView) findViewById(R.id.emptyview);
         sportsmenListView.setEmptyView(textView);
-        Log.e("KOKO", String.valueOf(isConected));
         if (isConected) ((TextView) textView).setText("No Data");
         else ((TextView) textView).setText("NO internet connection");
         View progressBar = findViewById(R.id.progress_bar);
@@ -135,5 +130,4 @@ public class SportsmenList extends AppCompatActivity implements LoaderManager.Lo
             return true;
         }
     }
-
 }

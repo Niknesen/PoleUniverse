@@ -1,12 +1,9 @@
 package com.example.poleuniversev20;
-
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.preference.PreferenceManager;
@@ -25,9 +22,7 @@ public class Categories2Day extends AppCompatActivity {
         category = findViewById(view.getId());
         Intent sportlist = new Intent(Categories2Day.this, SportsmenList.class);
         sportlist.putExtra("Category", category.getText());
-        //  Log.d("Category ", (String) category.getText());
         sportlist.putExtra("Action", CheckAction());
-        //  sportlist.putExtra("Day","2");
         startActivity(sportlist);
     }
 

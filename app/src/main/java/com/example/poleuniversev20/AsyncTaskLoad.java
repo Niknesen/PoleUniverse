@@ -2,7 +2,6 @@ package com.example.poleuniversev20;
 
 import android.content.AsyncTaskLoader;
 import android.content.Context;
-
 import java.util.ArrayList;
 
 public class AsyncTaskLoad extends AsyncTaskLoader {

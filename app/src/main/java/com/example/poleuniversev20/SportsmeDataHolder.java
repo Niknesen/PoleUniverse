@@ -10,24 +10,18 @@ public class SportsmeDataHolder {
     public boolean isRatedTechnique() {
         return ratedTechnique;
     }
-
     public boolean isRatedChoreography() {
         return ratedChoreography;
     }
-
     public boolean isRatedArtistic() {
         return ratedArtistic;
     }
-
     public boolean isRatedPenalty() {
         return ratedPenalty;
     }
-
-
     public String getmName() {
         return mName;
     }
-
 
     public SportsmeDataHolder(String mName, boolean ratedTechnique, boolean ratedChoreography, boolean ratedArtistic, boolean ratedPenalty) {
         this.mName = mName;

@@ -2,7 +2,6 @@ package com.example.poleuniversev20;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.preference.PreferenceManager;
-
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -19,7 +18,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //setContentView(R.layout.form_penalty);
         setContentView(R.layout.activity_main);
 
         buttonChoreography = findViewById(R.id.buttonChoreography);
@@ -31,7 +29,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent TechniqueIntent = new Intent(MainActivity.this, StartActivity.class);
-                //TechniqueIntent.putExtra("Action","Technique");
                 SaveAction("Technique");
                 startActivity(TechniqueIntent);
             }
@@ -40,7 +37,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent choreographyIntent = new Intent(MainActivity.this, StartActivity.class);
-                //choreographyIntent.putExtra("Action","Choreography");
                 SaveAction("Choreography");
                 startActivity(choreographyIntent);
             }
@@ -49,7 +45,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent artisticIntent = new Intent(MainActivity.this, StartActivity.class);
-                // artisticIntent.putExtra("Action","Artistic");
                 SaveAction("Artistic");
                 startActivity(artisticIntent);
             }
@@ -58,7 +53,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent penaltyIntent = new Intent(MainActivity.this, StartActivity.class);
-                // penaltyIntent.putExtra("Action","Penalty");
                 SaveAction("Penalty");
                 startActivity(penaltyIntent);
             }
@@ -66,7 +60,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     //Adding option to clear the Judge name
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_judge, menu);

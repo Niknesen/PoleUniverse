@@ -1,34 +1,25 @@
 package com.example.poleuniversev20;
 
-import android.content.Context;
+
 import android.os.AsyncTask;
 import android.util.Log;
-
 import java.io.DataOutputStream;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
-
-//
-
 public class PostQueryUtils extends AsyncTask<String, Void, String> {
 
 
     @Override
     protected String doInBackground(String... params) {
-
         String data = "";
-
         HttpURLConnection httpURLConnection = null;
         try {
-
             httpURLConnection = (HttpURLConnection) new URL(params[0]).openConnection();
             httpURLConnection.setRequestMethod("POST");
-
             httpURLConnection.setDoOutput(true);
-
             DataOutputStream wr = new DataOutputStream(httpURLConnection.getOutputStream());
             wr.writeBytes("PostData=" + params[1]);
             wr.flush();
@@ -49,13 +40,11 @@ public class PostQueryUtils extends AsyncTask<String, Void, String> {
                 httpURLConnection.disconnect();
             }
         }
-
         return data;
     }
-
     @Override
     protected void onPostExecute(String result) {
         super.onPostExecute(result);
-        Log.v("TAG123", result); // this is expecting a response code to be sent from your server upon receiving the POST data
+        Log.v("POST resp code: ", result);
     }
 }

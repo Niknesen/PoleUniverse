@@ -18,24 +18,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.preference.PreferenceManager;
-
-import com.android.volley.AuthFailureError;
-import com.android.volley.DefaultRetryPolicy;
-import com.android.volley.Request;
-import com.android.volley.RequestQueue;
-import com.android.volley.Response;
-import com.android.volley.RetryPolicy;
-import com.android.volley.VolleyError;
-import com.android.volley.toolbox.StringRequest;
-import com.android.volley.toolbox.Volley;
-
-import org.json.JSONException;
-import org.json.JSONObject;
-
 import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
@@ -61,23 +46,17 @@ public class RangingTechnik extends AppCompatActivity {
 
         ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
-
-
         sportsmenName = getIntent().getStringExtra("SportsmenName");
         Log.v("TEST0, ", sportsmenName);
         sportsmenCategory = getIntent().getStringExtra("Сategory");
-
         TextView nameView = findViewById(R.id.TechniDancerName);
         nameView.setText(sportsmenName);
         buttonLoad = findViewById(R.id.buttonSaveRangingTechnik);
         TextView category = findViewById(R.id.formCategoryTechnik);
         category.setText(sportsmenCategory);
-        //PostButton -> PostRanging.class,
         buttonLoad.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // EditText textView = findViewById(R.id.TechnikJudgeComment);
-                // textView.setCursorVisible(false);
                 try {
                     Intent intent = new Intent(getApplicationContext(), PostRanging.class);
                     intent.putExtra("scores", (Serializable) GetScore()); //Put your id to your next Intent
@@ -123,8 +102,6 @@ public class RangingTechnik extends AppCompatActivity {
         //Judge Name
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
         String judgeName = preferences.getString("JudgeNameChoreography", "No Judge");
-
-        //
 
         Map<String, String> score = new HashMap<>();
         score.put("category", sportsmenCategory);

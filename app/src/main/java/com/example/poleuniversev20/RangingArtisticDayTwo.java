@@ -11,12 +11,10 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.preference.PreferenceManager;
-
 import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
@@ -49,36 +47,26 @@ public class RangingArtisticDayTwo extends AppCompatActivity {
         Pattern pattern = Pattern.compile(".*SPORT.*");
         Matcher matcher = pattern.matcher(sportsmenCategory);
         isSport = matcher.find();
-
-
         if (isSport) {
             setContentView(R.layout.form_artistic_sport);
-
             TextView nameView = findViewById(R.id.ArtisticSportSportsmenName);
             nameView.setText(sportsmenName);
-
             buttonLoad = findViewById(R.id.rangingLoadArtisticSport);
-
             TextView category = findViewById(R.id.formCategoryArtisticSport);
             category.setText(sportsmenCategory);
         } else {
             setContentView(R.layout.form_artistic_aerials);
-
             TextView nameView = findViewById(R.id.ArtisticAerialsSportsmenName);
             nameView.setText(sportsmenName);
-
             buttonLoad = findViewById(R.id.rangingLoadArtisticAerials);
-
             TextView category = findViewById(R.id.formCategoryAerialArtsic);
             category.setText(sportsmenCategory);
         }
-
 
         buttonLoad.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), PostRanging.class);
-
                 try {
                     if (isSport)
                         intent.putExtra("scores", (Serializable) GetScoreSport()); //Put your id to your next Intent
@@ -90,9 +78,6 @@ public class RangingArtisticDayTwo extends AppCompatActivity {
                     Toast t = Toast.makeText(getApplicationContext(), "Вы Заполнили не все поля", Toast.LENGTH_LONG);
                     t.show();
                 }
-
-
-                // Log.v("Debug","Has posted");
             }
         });
     }
@@ -118,21 +103,15 @@ public class RangingArtisticDayTwo extends AppCompatActivity {
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
         String judgeName = preferences.getString("JudgeNameChoreography", "No Judge");
 
-        //
-
         Map<String, String> score = new HashMap<>();
-
         score.put("category", sportsmenCategory);
         score.put("action", "ArtisticAerials");
         score.put("name", sportsmenName);
         score.put("judge", judgeName);
-
         score.put("emotions", (String) radioButtonPower.getText());
         score.put("suit", (String) radioButtonFlex.getText());
         score.put("idea", (String) radioButtonDoublePole.getText());
         score.put("stage", (String) radioButtonBalance.getText());
-
-
         score.put("comment", TechnikJudgeCommentView.getText().toString());
         return score;
     }
@@ -155,20 +134,14 @@ public class RangingArtisticDayTwo extends AppCompatActivity {
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
         String judgeName = preferences.getString("JudgeNameChoreography", "No Judge");
 
-        //
-
         Map<String, String> score = new HashMap<>();
-
         score.put("category", sportsmenCategory);
         score.put("action", "ArtisticSport");
         score.put("name", sportsmenName);
         score.put("judge", judgeName);
-
         score.put("emotions", (String) radioButtonPower.getText());
         score.put("suit", (String) radioButtonFlex.getText());
         score.put("stage", (String) radioButtonBalance.getText());
-
-
         score.put("comment", TechnikJudgeCommentView.getText().toString());
         return score;
     }

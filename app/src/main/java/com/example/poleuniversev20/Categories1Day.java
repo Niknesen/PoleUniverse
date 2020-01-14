@@ -38,6 +38,7 @@ public class Categories1Day extends AppCompatActivity {
         return action;
     }
 
+    //Saving the selected day in sharedPref
     public void SaveDay() {
         SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(this);
         SharedPreferences.Editor editor = sharedPref.edit();

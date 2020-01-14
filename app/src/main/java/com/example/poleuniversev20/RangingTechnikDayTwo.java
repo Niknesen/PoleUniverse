@@ -12,12 +12,10 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.preference.PreferenceManager;
-
 import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
@@ -52,31 +50,23 @@ public class RangingTechnikDayTwo extends AppCompatActivity {
 
         if (isSport) {
             setContentView(R.layout.form_technique_sport);
-
             TextView nameView = findViewById(R.id.TechniDancerNameSport);
             nameView.setText(sportsmenName);
-
             buttonLoad = findViewById(R.id.buttonSaveRangingTechnikSport);
-
             TextView category = findViewById(R.id.formCategoryTechnikSport);
             category.setText(sportsmenCategory);
         } else {
             setContentView(R.layout.form_technique_aerials);
-
             TextView nameView = findViewById(R.id.TechniDancerNameAerials);
             nameView.setText(sportsmenName);
-
             buttonLoad = findViewById(R.id.buttonSaveRangingTechnikAerials);
-
             TextView category = findViewById(R.id.formCategoryTechnikAerials);
             category.setText(sportsmenCategory);
         }
-        //PostButton -> PostRanging.class,
+
         buttonLoad.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // EditText textView = findViewById(R.id.TechnikJudgeComment);
-                // textView.setCursorVisible(false);
                 try {
                     Intent intent = new Intent(getApplicationContext(), PostRanging.class);
                     if (isSport)
@@ -124,8 +114,6 @@ public class RangingTechnikDayTwo extends AppCompatActivity {
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
         String judgeName = preferences.getString("JudgeNameChoreography", "No Judge");
 
-        //
-
         Map<String, String> score = new HashMap<>();
         score.put("category", sportsmenCategory);
         score.put("action", "TechnikAerials");
@@ -169,8 +157,6 @@ public class RangingTechnikDayTwo extends AppCompatActivity {
         //Judge Name
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
         String judgeName = preferences.getString("JudgeNameChoreography", "No Judge");
-
-        //
 
         Map<String, String> score = new HashMap<>();
         score.put("category", sportsmenCategory);

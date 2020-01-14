@@ -12,12 +12,10 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.preference.PreferenceManager;
-
 import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
@@ -27,7 +25,6 @@ import java.util.regex.Pattern;
 public class RangingChoreographyDayTwo extends AppCompatActivity {
     Button buttonLoad;
     String sportsmenName, sportsmenCategory;
-
     boolean isSport;
 
     @Override
@@ -41,46 +38,32 @@ public class RangingChoreographyDayTwo extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        // SportsmenName
         super.onCreate(savedInstanceState);
-        //setContentView(R.layout.form_choreography);
         ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
         sportsmenName = getIntent().getStringExtra("SportsmenName");
         sportsmenCategory = getIntent().getStringExtra("Сategory");
-
         Pattern pattern = Pattern.compile(".*SPORT.*");
         Matcher matcher = pattern.matcher(sportsmenCategory);
         isSport = matcher.find();
         if (isSport) {
             setContentView(R.layout.form_choreography_sport);
-
-
             TextView nameView = findViewById(R.id.ChoreographySportsmenNameSport);
             nameView.setText(sportsmenName);
-
             buttonLoad = findViewById(R.id.rangingLoadChoreographySport);
-
             TextView category = findViewById(R.id.formCategoryChoreographySport);
             category.setText(sportsmenCategory);
         } else {
             setContentView(R.layout.form_choreography_aerials);
-
-            // setContentView(R.layout.form_artistic);
-
             TextView nameView = findViewById(R.id.ChoreographySportsmenNameAerilas);
             nameView.setText(sportsmenName);
             buttonLoad = findViewById(R.id.rangingLoadChoreographyAerilas);
-
             TextView category = findViewById(R.id.formCategoryChoreographyAerilas);
             category.setText(sportsmenCategory);
         }
-        //PostButton -> PostRanging.class,
         buttonLoad.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // EditText textView = findViewById(R.id.TechnikJudgeComment);
-                // textView.setCursorVisible(false);
                 try {
                     Intent intent = new Intent(getApplicationContext(), PostRanging.class);
                     if (isSport)
@@ -113,17 +96,12 @@ public class RangingChoreographyDayTwo extends AppCompatActivity {
         RadioGroup radioGroupBalance = findViewById(R.id.radioChoreographyDynamicAerilas);
         RadioButton radioButtonBalance = findViewById(radioGroupBalance.getCheckedRadioButtonId());
 
-        //Name of PoleDancer
-        // TextView TechniDancerNameView = findViewById(R.id.ChoreographySportsmenName);
-
         //Judge Comments
         EditText TechnikJudgeCommentView = findViewById(R.id.editChoreographyCommentAerilas);
 
         //Judge Name
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
         String judgeName = preferences.getString("JudgeNameChoreography", "No Judge");
-
-        //
 
         Map<String, String> score = new HashMap<>();
         score.put("category", sportsmenCategory);
@@ -155,17 +133,12 @@ public class RangingChoreographyDayTwo extends AppCompatActivity {
         RadioGroup radioGroupBalance = findViewById(R.id.radioChoreographyDynamicSport);
         RadioButton radioButtonBalance = findViewById(radioGroupBalance.getCheckedRadioButtonId());
 
-        //Name of PoleDancer
-        // TextView TechniDancerNameView = findViewById(R.id.ChoreographySportsmenName);
-
         //Judge Comments
         EditText TechnikJudgeCommentView = findViewById(R.id.editChoreographyCommentSport);
 
         //Judge Name
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
         String judgeName = preferences.getString("JudgeNameChoreography", "No Judge");
-
-        //
 
         Map<String, String> score = new HashMap<>();
         score.put("category", sportsmenCategory);

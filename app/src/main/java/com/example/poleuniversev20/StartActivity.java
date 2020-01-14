@@ -74,6 +74,4 @@ public class StartActivity extends AppCompatActivity {
         SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(this);
         judgeName = sharedPref.getString("JudgeNameChoreography", "No Judge");
     }
-
-
 }
